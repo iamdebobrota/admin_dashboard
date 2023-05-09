@@ -198,14 +198,14 @@ function Home({ members }: IHome) {
   // to call setDisplayData function whenever page no change or searchKey change
   useEffect(() => {
     setDisplayData();
-  }, [pageNo, searchKey, deletedIdList, setDisplayData]);
+  }, [pageNo, searchKey, deletedIdList]);
 
   // to change action when required and to clear selection when page changes and set displayable page numbers
   useEffect(() => {
     setSelectedMembers([]);
     setSelectAllCurrentPage(false);
     getPaginationList();
-  }, [pageNo, getPaginationList]);
+  }, [pageNo]);
 
   return (
     <main
